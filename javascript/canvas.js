@@ -47,70 +47,71 @@ class HangmanCanvas {
           this.context.moveTo(50, 300)
           this.context.lineTo(150, 300)
           this.context.lineTo(100, 250)
-          this.context.closePath()
+          this.context.lineTo(50, 300)
           this.context.stroke();
+          this.context.closePath()
           break;
       case 8:
         this.context.beginPath()
         this.context.moveTo(100,250)
         this.context.lineTo(100,0)
-        this.context.closePath()
         this.context.stroke();
+        this.context.closePath()
         break;
       case 7:
           this.context.beginPath()
           this.context.moveTo(100,0)
           this.context.lineTo(300,0)
-          this.context.closePath()
           this.context.stroke()
+          this.context.closePath()
         break;
       case 6:
           this.context.beginPath()
           this.context.moveTo(300,0)
           this.context.lineTo(300,50)
-          this.context.closePath()
           this.context.stroke()
+          this.context.closePath()
         break;
       case 5:
-        this.context.beginPath()
-        this.context.arc(300, 100,25, 0, Math.PI * 2)
-        this.content.closePath()
-        this.content.stroke()
+        this.context.beginPath();
+        this.context.arc(300, 100,25, 0, Math.PI*2);
+        this.context.stroke();
+        this.context.closePath();
         break;
       case 4:
         this.context.beginPath()
         this.context.moveTo(300,125)
         this.context.lineTo(300,200)
-        this.context.closePath()
         this.context.stroke()
+        this.context.closePath()
         break;
         case 3:
           this.context.beginPath()
           this.context.moveTo(300,125)
           this.context.lineTo(400,125)
-          this.context.closePath()
           this.context.stroke()
+          this.context.closePath()
           break;
           case 2:
             this.context.beginPath()
             this.context.moveTo(300,125)
             this.context.lineTo(200,125)
-            this.context.closePath()
             this.context.stroke()
+            this.context.closePath()
             break;
             case 1:
               this.context.beginPath()
               this.context.moveTo(300,200)
               this.context.lineTo(200,275)
-              this.context.closePath()
               this.context.stroke()
+              this.context.closePath()
               break;
               case 0:
                 this.context.beginPath()
                 this.context.moveTo(300,200)
                 this.context.lineTo(400,275)
-                this.context.closePath()
                 this.context.stroke()
+                this.context.closePath()
                 break;
     }
   }

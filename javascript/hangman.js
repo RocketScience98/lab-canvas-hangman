@@ -103,14 +103,22 @@ document.addEventListener('keydown', event => {
   const keyCode =event.keyCode
   const key = event.key
   let ih = hangmanCanvas.secretWord.indexOf(key)
-  hangman.checkClickedLetters(event.key)
+  let secretArray=Array.from(hangman.secretWord)
+  let matrizUnica=[]
+  console.log(ih)
+  hangman.checkClickedLetters(keyCode)
    if (
     hangman.checkIfLetter(keyCode) &&
     hangman.checkClickedLetters(key) &&
     !hangman.guessedLetters.includes(key)){
-      if (hangman.secretWord.includes(key)){
+      if (hangman.secretWord.includes(key)){        
         hangman.addCorrectLetter(key);
-        hangmanCanvas.writeCorrectLetter(ih);
+        for(let i=0;i<secretArray.length;i++){
+          if(key == secretArray[i]){
+            hangmanCanvas.writeCorrectLetter(i)
+          }
+        }
+        ;
         if(hangman.checkWinner() === true){
           hangmanCanvas.winner();
           setTimeout(function(){alert (`You win!`)},500);
