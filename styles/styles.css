@@ -14,4 +14,14 @@
 
 #hangman {
   text-align: center;
+
+}
+#gamebox{
+  position: fixed;
+  top: 100;
+  width: 92%;
+  height: 25%;
+  background-color: white;
+  padding: 30px;
+  border: black solid 40px;
 }
